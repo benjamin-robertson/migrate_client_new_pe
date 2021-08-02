@@ -26,6 +26,9 @@
 # set all my varibles
 pe_server=$PT__new_pe_server
 
+echo $pe_server > /tmp/pe_server
+env > /tmp/pe_server_env
+
 yum -y erase puppet-agent
 rm -rf /etc/puppetlabs/
 rm -rf /opt/puppetlabs/
