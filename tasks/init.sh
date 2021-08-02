@@ -24,14 +24,9 @@
 
 
 # set all my varibles
-pe_server=$PT__new_pe_server
-
-echo $pe_server > /tmp/pe_server
-env > /tmp/pe_server_env
+pe_server=$PT_new_pe_server
 
 yum -y erase puppet-agent
 rm -rf /etc/puppetlabs/
 rm -rf /opt/puppetlabs/
-curl -k https://$pe_server:8140/packages/current/install.bash > /tmp/installpe.bash 
-chmod 755 /tmp/installpe.bash
-/tmp/installpe.bash 
+curl -k https://$pe_server:8140/packages/current/install.bash | sudo bash
