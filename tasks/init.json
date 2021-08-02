@@ -8,5 +8,9 @@
       "description": "New PE server to connect the agent to",
       "type": "String[1]"
     }
-  }
+  },
+  "implementations": [
+    {"name": "init.sh", "requirements": ["shell"]},
+    {"name": "init.ps1", "requirements": ["powershell"]}
+  ]
 }
