@@ -24,7 +24,7 @@
 
 
 # set all my varibles
-$pe_server=$env:PT__new_pe_server
+$pe_server=$env:PT_new_pe_server
 
 echo $pe_server > c:\varibles.txt
 
