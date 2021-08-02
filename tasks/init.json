@@ -1,7 +1,12 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "A short description of this task",
+  "description": "Migrate agents from an exisiting PE installation to a new one with new CA",
+  "input_method": "environment",
   "parameters": {
+    "new_pe_server": {
+      "description": "New PE server to connect the agent to",
+      "type": "String[1]"
+    }
   }
 }
