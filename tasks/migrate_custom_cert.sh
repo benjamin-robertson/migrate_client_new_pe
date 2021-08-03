@@ -25,8 +25,11 @@
 
 # set all my varibles
 pe_server=$PT_new_pe_server
+certname=$PT_certname
+certname_arg="agent:certname='${certname}' "
 
 yum -y erase puppet-agent
 rm -rf /etc/puppetlabs/
 rm -rf /opt/puppetlabs/puppet
-curl -k https://$pe_server:8140/packages/current/install.bash | sudo bash
+curl -k https://$pe_server:8140/packages/current/install.bash -o /tmp/install.bash
+bash /tmp/install.bash ${certname_arg}

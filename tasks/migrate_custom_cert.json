@@ -1,0 +1,20 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Migrate agents from an exisiting PE installation to a new one with new CA with custom cert",
+  "input_method": "environment",
+  "parameters": {
+    "new_pe_server": {
+      "description": "New PE server to connect the agent to",
+      "type": "String[1]"
+    },
+    "certname": {
+      "description": "Agent certname",
+      "type": "String[1]"
+    }
+  },
+  "implementations": [
+    {"name": "migrate_custom_cert.sh", "requirements": ["shell"]},
+    {"name": "init.ps1", "requirements": ["powershell"]}
+  ]
+}
