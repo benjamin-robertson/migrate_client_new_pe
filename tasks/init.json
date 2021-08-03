@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "Migrate agents from an exisiting PE installation to a new one with new CA, Windows or linux",
+  "description": "Migrate agents from an existing PE installation to a new one with new CA, Windows or linux",
   "input_method": "environment",
   "parameters": {
     "new_pe_server": {
