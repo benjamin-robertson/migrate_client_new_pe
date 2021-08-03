@@ -24,11 +24,8 @@
 
 
 # set all my varibles
-$pe_server=$env:PT_new_pe_server
+pe_server=$PT_new_pe_server
 
-echo $pe_server > c:\varibles.txt
-
-Uninstall-Package -Force -Name 'Puppet Agent (64-bit)'
-rm -Recurse 'C:\Program Files\Puppet Labs'
-rm -Recurse C:\ProgramData\PuppetLabs\
-[System.Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; [Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webClient = New-Object System.Net.WebClient; $webClient.DownloadFile("https://$pe_server:8140/packages/current/install.ps1", 'install.ps1'); .\install.ps1 -v
+yum -y erase puppet-agent
+rm -rf /etc/puppetlabs/
+rm -rf /opt/puppetlabs/puppet

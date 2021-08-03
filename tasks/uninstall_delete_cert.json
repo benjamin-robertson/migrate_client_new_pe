@@ -1,0 +1,10 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Migrate agents from an exisiting PE installation to a new one with new CA",
+  "input_method": "environment",
+  "implementations": [
+    {"name": "init.sh", "requirements": ["shell"]},
+    {"name": "init.ps1", "requirements": ["powershell"]}
+  ]
+}
