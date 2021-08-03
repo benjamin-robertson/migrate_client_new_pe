@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "Migrate agents from an exisiting PE installation to a new one with new CA",
+  "description": "Remove Puppet agent and certs from a windows or linux machine",
   "input_method": "environment",
   "implementations": [
     {"name": "init.sh", "requirements": ["shell"]},
